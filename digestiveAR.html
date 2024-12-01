@@ -437,6 +437,99 @@ model-viewer.expanded {
       display: none;
       z-index: 4; /* Background overlay below the model viewer */
     }
+
+
+    
+    /* General adjustments for small screens */
+@media (max-width: 768px) {
+  body {
+    font-size: 90%; /* Scale font size */
+  }
+
+  .header {
+    width: 90%; /* Reduce width */
+    font-size: 1.5em; /* Adjust font size */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .quiz-button {
+    width: 50px;
+    height: 50px;
+    font-size: 0.7em;
+  }
+
+  .ar-main-image {
+    max-width: 100%; /* Ensure the image scales to fit */
+    margin-top: 50px;
+  }
+
+  .info-container {
+    width: 90%; /* Scale down container width */
+    height: auto; /* Adjust height for content */
+    padding: 10px;
+  }
+
+  .tooltip {
+    width: 200px; /* Reduce tooltip width */
+    font-size: 0.9em; /* Scale font size */
+  }
+
+  .cards-section {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 15px; /* Adjust spacing */
+  }
+
+  .ar-card {
+    width: 90%; /* Adjust card width */
+    margin: 0 auto; /* Center align */
+  }
+
+  model-viewer {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 480px) {
+  .header {
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  .ar-main-image {
+    margin-top: 30px;
+  }
+
+  .info-container {
+    width: 100%;
+  }
+
+  .button-container {
+    max-width: 100%;
+    padding: 10px 15px;
+  }
+
+  .tooltip {
+    font-size: 0.8em;
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+            model-viewer {
+                width: 90%;
+                max-width: 500px;
+                aspect-ratio: 1; /* Maintains aspect ratio for tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            model-viewer {
+                width: 100%;
+                max-width: 350px;
+                aspect-ratio: 1; /* Maintains aspect ratio for mobile devices */
+            }
+        }
   </style>
 </head>
 <body>
